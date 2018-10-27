@@ -2,3 +2,12 @@
     width: 30%;
     color:gray;
 }
+.form{
+    padding-bottom: 40opx;
+}
+.container{
+    background: linear-gradient(to right, #603813, #b29f94);
+}
+.header{
+    text-align: center;
+}
