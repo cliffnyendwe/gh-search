@@ -1,6 +1,5 @@
 
-<div class="container">
-  <h1 class='header'>GH-SEARCH</h1>
+<div class="container-body">
   
     <div class="row">
       <div class="col-md-12">
@@ -22,17 +21,17 @@
           <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
               <img class="img-thumbnail" src="{{user.avatar_url}}">
-             <button> <a class="btn btn-default btn-block" target="_blank" href="{{user.html_url}}">View Profile</a></button>
+             <button><a class="btn btn-default btn-block" target="_blank" href="{{user.html_url}}">View Profile</a></button>
             </div>
   
             <div class="col-md-5 col-sm-5 col-xs-12">
-              <div class="form">
+              <div class="stats">
                 <p>{{user.bio}}</p>
-                <div class="btn btn-primary">{{user.public_repos}} Public Repos</div>
+                <div class="btn btn-secondary">{{user.public_repos}} Public Repos</div>
                 <div class="btn btn-primary">{{user.followers}} Followers</div>
-                <div class="btn btn-primary">{{user.following}} Following</div>
-                <div class="badge badge-secondary">{{user.company}}</div>
-                <div class="btn btn-primary">{{user.type}}</div>
+                <div class="btn btn-success">{{user.following}} Following</div>
+                <div class="btn btn-danger">{{user.company}} User</div>
+                <!-- <div class="btn btn-secondary">{{user.type}}</div> -->
               </div>
               <br/>
               <ul class="list-group">
