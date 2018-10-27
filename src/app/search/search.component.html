@@ -1,9 +1,9 @@
 
-<div class="container-body">
-  
+<div class="container">
+  <h1>GH-SEARCH</h1>
     <div class="row">
       <div class="col-md-12">
-        <form class="well">
+        <form>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
           </div>
@@ -21,17 +21,19 @@
           <div class="row">
             <div class="col-md-4 col-sm-4 col-xs-12">
               <img class="img-thumbnail" src="{{user.avatar_url}}">
-             <button><a class="btn btn-default btn-block" target="_blank" href="{{user.html_url}}">View Profile</a></button>
+              <div>
+             <button><a class="btn btn-secondary" target="_blank" href="{{user.html_url}}">View Repos</a></button>
+             </div>I
             </div>
   
             <div class="col-md-5 col-sm-5 col-xs-12">
-              <div class="stats">
+              <div class="header">
                 <p>{{user.bio}}</p>
                 <div class="btn btn-secondary">{{user.public_repos}} Public Repos</div>
                 <div class="btn btn-primary">{{user.followers}} Followers</div>
                 <div class="btn btn-success">{{user.following}} Following</div>
                 <div class="btn btn-danger">{{user.company}} User</div>
-                <!-- <div class="btn btn-secondary">{{user.type}}</div> -->
+                 <!-- <div class="btn btn-secondary">{{user.type}}</div>  -->
               </div>
               <br/>
               <ul class="list-group">

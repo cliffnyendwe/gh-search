@@ -1,4 +1,4 @@
-/* .form-group{
+.form-group{
     width: 30%;
     color:gray;
 }
@@ -10,4 +10,8 @@
 }
 .header{
     text-align: center;
-} */
+}
+h1{
+    text-align:center;
+    color:blueviolet;
+}
