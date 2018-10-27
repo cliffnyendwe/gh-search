@@ -1,6 +1,6 @@
 .form-group{
     width: 30%;
-    color:gray;
+    color:white;
 }
 .form{
     padding-bottom: 40opx;
@@ -13,5 +13,8 @@
 }
 h1{
     text-align:center;
-    color:blueviolet;
+    color:whitesmoke;
+}
+.search{
+    width: 800px;
 }
