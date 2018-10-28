@@ -34,6 +34,11 @@ The project is under license by MIT
 ##Motivation
 To make it easy for developers and the upcoming developers to be able to access their repositories.
 
+## Language used
+HTML
+CSS
+Angular
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
