@@ -1,81 +1,85 @@
-<div class="container">
-  <h1>GH-SEARCH</h1>
-  <div class="seach">
-    <!-- <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlYSQTo8pqig43vSELrJfa9LgbdRyUNNwXa8jPYs2fmcfYWl3ZVQ'> -->
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="username" [(ngModel)]="username" name="username" (keyup)="findProfile()">
-        </div>
-      </form>
+<body class="body">
+  <div class="container">
+    <h1>GH-SEARCH</h1>
+    <div class="seach">
+      <!-- <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlYSQTo8pqig43vSELrJfa9LgbdRyUNNwXa8jPYs2fmcfYWl3ZVQ'> -->
     </div>
-  </div>
-
-
-  <div *ngIf="user">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title" style="font-size: 20px;"><strong>GitHub Name: {{user.name}}</strong></h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <img class="img-thumbnail" src="{{user.avatar_url}}">
-            <div>
-              <button><a class="btn btn" target="_blank" href="{{user.html_url}}">GH-ACCOUNT</a></button>
-            </div>I
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="username" [(ngModel)]="username" name="username"
+              (keyup)="findProfile()">
+            <button (click)="searchUser()" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
           </div>
-
-          <div class="col-md-5 col-sm-5 col-xs-12">
-            <div class="header">
-              <p>{{user.bio}}</p>
-              <div class="btn btn">{{user.public_repos}} Public Repos</div>
-              <div class="btn btn">{{user.followers}} Followers</div>
-              <div class="btn btn">{{user.following}} Following</div>
-              <div class="btn btn">{{user.company}} User</div>
-              <!-- <div class="btn btn-secondary">{{user.type}}</div>  -->
-            </div>
-            <br />
-            <ul class="list-group">
-              <li class="list-group-item">
-                <b>Username: </b>{{user.name}}
-              </li>
-              <li class="list-group-item">
-                <b>Location: </b>{{user.location}}
-              </li>
-              <li class="list-group-item">
-                <b>Email: </b>{{user.email}}
-              </li>
-              <li class="list-group-item">
-                <strong>Member Since: </strong>{{user.created_at}}
-              </li>
-            </ul>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-    <div class="container" style="padding: right 400px;">
+
+
+    <div *ngIf="user" class="col s12 m4 l2">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h2 class="panel-title" style="text-align:center"><b>User Repos</b></h2>
+          <h3 class="panel-title" style="font-size: 20px;"><strong>GitHub Name: {{user.name}}</strong></h3>
         </div>
         <div class="panel-body">
-          <div *ngFor="let repo of repos">
-            <div class="row">
-              <div class="col-md-9">
-                <h4>
-                  <a target="_blank" href="{{repo.html_url}}">{{repo.name}}</a>
-                </h4>
-                <p>{{repo.description}}</p>
-              </div>
-
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <img class="img-thumbnail" src="{{user.avatar_url}}">
+              <div>
+                <button><a class="btn btn" target="_blank" href="{{user.html_url}}">GH-ACCOUNT</a></button>
+              </div>I
             </div>
-            <hr>
+
+            <div class=" class=" col s12 m4 l2>
+              <div class="header">
+                <p>{{user.bio}}</p>
+                <div class="btn btn">{{user.public_repos}} Public Repos</div>
+                <div class="btn btn">{{user.followers}} Followers</div>
+                <div class="btn btn">{{user.following}} Following</div>
+                <div class="btn btn">{{user.company}} User</div>
+                <!-- <div class="btn btn-secondary">{{user.type}}</div>  -->
+              </div>
+              <br />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>Username: </b>{{user.name}}
+                </li>
+                <li class="list-group-item">
+                  <b>Location: </b>{{user.location}}
+                </li>
+                <li class="list-group-item">
+                  <b>Email: </b>{{user.email}}
+                </li>
+                <li class="list-group-item">
+                  <strong>Member Since: </strong>{{user.created_at}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="padding: right 400px;">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title" style="text-align:center"><b>User Repos</b></h2>
+          </div>
+          <div class="panel-body">
+            <div *ngFor=" let repo of repos" class="col s12 m4 l2">
+              <div class="row">
+                <div class="col-md-9">
+                  <h4>
+                    <a target="_blank" href="{{repo.html_url}}">{{repo.name}}</a>
+                  </h4>
+                  <p>{{repo.description}}</p>
+                </div>
+
+              </div>
+              <hr>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</body>
