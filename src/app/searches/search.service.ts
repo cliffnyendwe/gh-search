@@ -19,6 +19,7 @@ export class SearchService {
     this.username =  'cliffnyendwe';
 
   }
+  
   getUser() {
     return this.http.get('https://api.github.com/users/' + this.username +
      '?client_id=' + environment.accessToken   + '&client_secret=' + environment.apiUrl)
